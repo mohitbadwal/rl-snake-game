@@ -24,10 +24,10 @@ class SnakeGameEnvironment:
 
     MATRIX_SIZE = 420
 
-    def __init__(self, agent):
+    def __init__(self, agent,numberOfObstacles=0):
         self.keyboard = Controller()
         self.food = vector(0, 50)
-        self.numberOfObstacles = 0
+        self.numberOfObstacles = numberOfObstacles
         self.obstacles = []
         self.snake = [vector(10, 20), vector(10, 10), vector(10, 0)]
         self.aim = vector(0, -10)
